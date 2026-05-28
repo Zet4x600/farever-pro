@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 255 23% 7%;
+    --foreground: 210 40% 98%;
+    --card: 255 23% 9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 255 23% 7%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 265 100% 50%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 184 100% 50%;
+    --secondary-foreground: 255 23% 7%;
+    --muted: 255 23% 15%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 184 100% 50%;
+    --accent-foreground: 255 23% 7%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 265 100% 50%;
+    --chart-1: 265 100% 50%;
+    --chart-2: 184 100% 50%;
+    --chart-3: 280 65% 60%;
+    --chart-4: 160 60% 45%;
+    --chart-5: 340 75% 55%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body selection:bg-primary/30 selection:text-secondary;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline tracking-tight;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-card/60 backdrop-blur-xl border border-white/5 shadow-2xl;
+  }
+  
+  .neon-glow-primary {
+    @apply shadow-[0_0_15px_rgba(106,0,255,0.4)];
+  }
+  
+  .neon-glow-accent {
+    @apply shadow-[0_0_15px_rgba(0,240,255,0.4)];
+  }
+
+  .glitch-hover:hover {
+    animation: glitch 0.2s infinite;
+  }
+
+  @keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+  }
+}

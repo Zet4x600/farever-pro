@@ -1,0 +1,24 @@
+
+{
+  "name": "Farever Pro Dashboard",
+  "short_name": "Farever Pro",
+  "description": "Advanced Modding Dashboard for Farever",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0910",
+  "theme_color": "#6a00ff",
+  "icons": [
+    {
+      "src": "https://picsum.photos/seed/farever/192/192",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://picsum.photos/seed/farever/512/512",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
