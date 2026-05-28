@@ -28,9 +28,16 @@ jobs:
       - name: Build Electron for Windows
         run: npm run electron:build
 
-      - name: Upload Build (Portable)
+      - name: Upload Installer (.exe)
         uses: actions/upload-artifact@v4
         with:
-          name: Farever-PRO-Windows-Portable
-          path: dist/Farever-PRO/*
+          name: Farever-PRO-Installer
+          path: dist/*.exe
+          retention-days: 30
+
+      - name: Upload Portable Version
+        uses: actions/upload-artifact@v4
+        with:
+          name: Farever-PRO-Portable
+          path: dist/*-win*
           retention-days: 30
